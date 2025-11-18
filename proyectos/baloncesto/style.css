@@ -1,0 +1,27 @@
+body {
+      margin: 0;
+      background: #4abff9;
+      overflow: hidden;
+    }
+    #juego {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    #aro {
+      position: absolute;
+      top: 100px;
+      left: 80%;
+      width: 60px;
+      height: 10px;
+      background: red;
+    }
+    #balon {
+      position: absolute;
+      top: 80%;
+      left: 50px;
+      width: 30px;
+      height: 30px;
+      background: orange;
+      border-radius: 50%;
+    }

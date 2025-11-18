@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mover Div</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+<form>
+    <label for="izq">Izquierda:</label>
+    <input type="number" id="izq">
+    <label for="arriba">Arriba:</label>
+    <input type="number" id="arriba">
+    <br><br>
+</form>
+<div>
+    <button type="button" onclick="moverAPosicion()">Posición original</button>
+    <button type="button" onclick="moverDiv()">Aleatorio</button>
+    <button type="button" onclick="moverBolasAleatorioX()">Aleatorio (Eje X)</button>
+    <button type="button" onclick="moverBolasAleatorioY()">Aleatorio (Eje Y)</button>
+</div>
+
+<div class="div1" id="uno"></div>
+<div class="div2" id="dos"></div>
+<div class="div3" id="tres"></div>
+<div class="div4" id="cuatro"></div>
+<div class="div5" id="cinco"></div>
+
+</body>
+</html>

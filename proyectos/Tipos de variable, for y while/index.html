@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 14 - Tipos de Datos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Demo de Tipos de Datos en Formulario</h2>
+
+    <form onsubmit="return false;">
+        <input id="nombre" type="text" value="Luis">
+        <input id="apellido" type="text" value="Rodriguez">
+        
+        <label>Edad:
+            <input type="number" id="edad" value="5" required>
+        </label>
+        <br><br>
+        
+        <input type="button" id="botonMostrar" value="Vuelca Datos" onclick="muestraDatos()">
+    </form>
+
+    <hr>
+    
+    <div id="uno" class="contenedor_ppal"></div>
+    
+    <div id="resultado"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

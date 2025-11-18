@@ -1,0 +1,21 @@
+body {
+  background-image: url("escenario1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.div1{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 500px;
+    top: 600px;
+    background-image: url("bola.png");
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+}
+
+input[type="range"] {
+  width: 200px;
+}
