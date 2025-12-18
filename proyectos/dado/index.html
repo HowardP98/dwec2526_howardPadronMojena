@@ -2,20 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>6 Dados Fijos</title>
+    <title>Dados Variables</title>
     <link rel="stylesheet" href="estilo.css">
     <script src="codigo.js"></script>
 </head>
 <body>
 
-    <h1>Lanzador de 6 Dados</h1>
+    <h1>Lanzador de Dados</h1>
 
-    <button onclick="lanzar6()">¡Lanzar los 6!</button>
+    <label for="cantidadDados">Selecciona la cantidad de dados (1-6):</label>
+    <select id="cantidadDados">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6" selected>6</option>
+    </select>
+    
+    <button onclick="lanzar()">¡Lanzar dados!</button>
     
     <hr>
-
     <div id="cajaResultados"></div>
-
     <h2 id="textoSuma">Suma total: 0</h2>
 
     <button onclick="limpiar()">Limpiar</button>

@@ -1,116 +1,136 @@
-:root {
-  /* Paleta principal Dota 2 */
-  --bg-dark: #141A21;       /* Fondo principal */
-  --bg-dark-alt: #1F2430;   /* Variante fondo */
-  --bg-card: #252C36;       /* Fondo tarjetas */
-  --text-light: #EAEAEA;    /* Texto principal */
-  --accent-blue: #1C6EF9;   /* Azul eléctrico */
-  --accent-green: #A8C63E;  /* Verde esmeralda */
-  --accent-gold: #D4AF37;   /* Dorado */
-}
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: 'Inter', 'Rajdhani', 'Roboto Mono', sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  line-height: 1.6;
-  /* Patrón sutil hexagonal para profundidad */
-  background-image: radial-gradient(circle at 1px 1px, #1F2430 1px, transparent 0);
-  background-size: 24px 24px;
+    font-family: "Press Start 2P", monospace, sans-serif;
+    background-color: #f2e9d8;
+    color: #2c2c2c;
+    line-height: 1.4;
+    background-image: linear-gradient(135deg, #f2e9d8 25%, #e6d7c5 25%, #e6d7c5 50%, #f2e9d8 50%, #f2e9d8 75%, #e6d7c5 75%, #e6d7c5 100%);
+    background-size: 40px 40px;
 }
 
-/* Contenedor principal */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem 3rem;
 }
 
-/* Encabezados */
-h1, h2 {
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: var(--accent-blue);
-  text-shadow: 0 0 6px rgba(28, 110, 249, 0.6);
-  margin-bottom: 1.5rem;
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 4px solid #444;
 }
 
-h1 {
-  font-size: 2.2rem;
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #d62828;
+    text-shadow: 2px 2px #fff;
 }
 
-h2 {
-  font-size: 1.6rem;
+header p {
+    font-size: 0.9rem;
+    color: #444;
 }
 
-/* Tarjetas estilo panel de información */
+.unit-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    color: #003049;
+    border-left: 6px solid #d62828;
+    padding-left: 0.5rem;
+}
+
+.project-grid {
+    display: grid;
+    margin-bottom: 5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
 .card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--accent-gold);
-  border-radius: 4px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+    border: 3px solid #444;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 4px 4px #d62828;
+    transition: transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 12px rgba(28, 110, 249, 0.6);
+    transform: scale(1.05);
 }
 
-.card h3 {
-  font-size: 1.2rem;
-  color: var(--accent-blue);
-  margin-bottom: 0.75rem;
-  text-shadow: 0 0 4px rgba(28, 110, 249, 0.5);
+.card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 3px solid #444;
 }
 
-.card p {
-  font-size: 0.95rem;
-  color: var(--text-light);
-  opacity: 0.9;
+.card-body {
+    padding: 0.8rem;
 }
 
-/* Botones estilo Dota 2 */
+.card-body h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #003049;
+}
+
+.card-body p {
+    color: #555;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
 .btn {
-  display: inline-block;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(to right, #0d2a5e, var(--accent-blue));
-  padding: 0.75rem 1.5rem;
-  border: 1px solid var(--accent-blue);
-  border-radius: 3px;
-  cursor: pointer;
-  box-shadow: 0 0 8px rgba(28, 110, 249, 0.6);
-  transition: background 0.2s ease, transform 0.1s ease;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #d62828;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    border: 3px solid #444;
+    cursor: pointer;
+    box-shadow: 3px 3px #444;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background: linear-gradient(to right, var(--accent-blue), #3a8dfd);
-  transform: translateY(-2px);
-  box-shadow: 0 0 12px rgba(168, 198, 62, 0.6);
+    background-color: #003049;
+    transform: translateY(-2px);
 }
 
-.btn:active {
-  transform: translateY(2px);
-  box-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+.unit-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    color: #003049;
+    border-left: 6px solid #d62828; 
+    padding-left: 0.5rem;
 }
 
-/* Footer */
 footer {
-  text-align: center;
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--accent-green);
-  font-size: 0.85rem;
-  color: var(--text-light);
-  opacity: 0.7;
+    text-align: center;
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 3px solid #444;
+    color: #555;
+    font-size: 0.8rem;
 }
+
+

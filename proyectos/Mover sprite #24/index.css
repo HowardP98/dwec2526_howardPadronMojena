@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    overflow: hidden; 
+    background-image: url('nubes-al-estilo-del-anime.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+}
+
+#character {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHZ5bTE1cDRpNWpreGN4eGk2aDJoZG93YTkxYWwwZWN6Zzl2czNiOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/SnctJfY81x2XC/giphy.gif');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    left: 300px;
+    top: 300px;
+    transition: all 0.1s linear; 
+}
+

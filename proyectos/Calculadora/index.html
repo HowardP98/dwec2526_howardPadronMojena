@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <title>Calculadora Básica</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <h2>Calculadora Básica</h2>
 
-    Número 1:
-    <input type="number" id="num1" value="7788">
-    <br><br> Número 2:
-    <input type="number" id="num2" value="9">
+    <label>Número 1:</label>
+    <input type="number" id="num1" value="">
     <br><br>
 
-    Operación:
+    <label>Número 2:</label>
+    <input type="number" id="num2" value="">
+    <br><br>
+
+    <label>Operación:</label>
     <select id="operacion">
         <option value="sumar">Sumar</option>
         <option value="restar" selected>Restar</option>
@@ -29,14 +32,13 @@
     <div class="resultado-caja">
         <b id="resultado"></b>
     </div>
-    
+    <br>
+
     <h3>Historial de operaciones:</h3>
-    <textarea id="historial"></textarea>
+    <div id="historial" class="historial-caja"></div>
     <br>
 
     <button onclick="limpiarHistorial()">Limpiar historial</button>
-
-    <script src="script.js" defer></script>
 
 </body>
 </html>

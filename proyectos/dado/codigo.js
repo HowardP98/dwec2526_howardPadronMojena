@@ -1,4 +1,6 @@
-function lanzar6() {
+function lanzar() {
+    let cantidadDadosElement = document.getElementById("cantidadDados");
+    let cantidadDados = parseInt(cantidadDadosElement.value); 
 
     let caja = document.getElementById("cajaResultados");
     let etiquetaSuma = document.getElementById("textoSuma");
@@ -6,7 +8,7 @@ function lanzar6() {
     let contenidoHTML = ""; 
     let suma = 0;
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < cantidadDados; i++) {
         
         let resultado = Math.floor(Math.random() * 6) + 1;
         suma = suma + resultado;

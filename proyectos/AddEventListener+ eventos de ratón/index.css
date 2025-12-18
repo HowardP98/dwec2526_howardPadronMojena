@@ -1,0 +1,11 @@
+#target {
+    width: 200px;             
+    height: 200px;            
+    background-color: grey;  
+    margin-top: 10px;         
+}
+
+#contador {
+    font-size: 20px;
+    font-weight: bold;
+}

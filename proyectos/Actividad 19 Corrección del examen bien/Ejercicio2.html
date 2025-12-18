@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Preg2.css">
+    <script src="Preg2.js" defer></script>
+</head>
+<body>
+    <div class="formulario">
+        <input id="boton1" type="button" onclick="piensaEnVerde()" value="Piensa en verde">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <label>Selecciona tipo de vehiculo</label>
+        <select id="vehiculo_select">
+            <option value="coche">coche</option>
+            <option value="moto">moto</option>
+            <option value="camion">camion</option>
+        </select>
+
+        <input id="boton2" type="button" onclick="muestraVehiculo()" value="Muestra vehiculo">
+    </div>
+
+    <div class="vehiculo" id="resultado"></div>
+    
+</body>
+</html>

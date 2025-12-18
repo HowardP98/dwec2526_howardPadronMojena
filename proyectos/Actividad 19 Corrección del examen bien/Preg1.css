@@ -1,0 +1,11 @@
+body{
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    margin: 2px;
+    padding: 2px;
+}
+
+.log{
+    border-radius: 1px;
+    margin: 2px;
+}

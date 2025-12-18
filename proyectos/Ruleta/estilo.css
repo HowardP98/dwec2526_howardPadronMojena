@@ -1,0 +1,76 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 { margin-top: 20px; }
+
+/* Circulo de la ruleta */
+.ruleta {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    margin: 20px auto;
+    position: relative;
+    /* Colores */
+    background: conic-gradient(
+        red 0deg 90deg, 
+        blue 90deg 180deg, 
+        green 180deg 270deg, 
+        #DAA520 270deg 360deg
+    );
+}
+
+/* AGUJA */
+.aguja {
+    width: 6px;
+    height: 110px;
+    background-color: black;
+    position: absolute;
+    
+    /* Centro */
+    top: 50%;
+    left: 50%;
+    
+    /* Decimos que el punto de giro sea su base */
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(0deg);
+    
+    transition: transform 1s ease-out;
+    z-index: 10;
+}
+
+.centro {
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+#resultadoTexto {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.iconos {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}

@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.contenedor {
+    border: 1px solid #000;
+    padding: 40px;
+    border-radius: 20px; 
+    width: 400px;
+}
+
+#pantalla-cuenta {
+    font-size: 80px; 
+    width: 150px;
+    height: 150px;
+    margin: 20px auto; 
+    border: 2px solid #000;
+    border-radius: 30px; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 0px 30px violet; 
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

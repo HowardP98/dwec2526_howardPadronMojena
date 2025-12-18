@@ -1,4 +1,3 @@
-// Definimos el color Verde Heineken para usarlo luego
 let VERDE_HEINEKEN = "#007A33"; 
 
 function calcular() {
@@ -9,34 +8,36 @@ function calcular() {
     let operacionSelect = document.getElementById('operacion');
     
     let resultadoParrafo = document.getElementById('resultado'); 
-    let historialTextarea = document.getElementById('historial');
+    
+    // Capturamos el DIV del historial
+    let historialDiv = document.getElementById('historial'); 
     
     // 2. Obtenemos el valor de los inputs
     let n1 = parseFloat(num1Input.value);
     let n2 = parseFloat(num2Input.value);
     let operacion = operacionSelect.value;
 
-    // Para guardar los resultados
+    // Para guardar los resultados y los estilos
     let resultado;
     let simbolo;
-    let colorResultado;
+    let colorHistorial; 
 
     // 3. Hacemos el calculo (switch)
     switch (operacion) {
         case "sumar":
             resultado = n1 + n2;
             simbolo = "+";
-            colorResultado = "blue"; 
+            colorHistorial = "green"; 
             break;
         case "restar":
             resultado = n1 - n2;
             simbolo = "-";
-            colorResultado = "red"; 
+            colorHistorial = "red"; 
             break;
         case "multiplicar":
             resultado = n1 * n2;
             simbolo = "*";
-            colorResultado = "green";
+            colorHistorial = "blue"; 
             break;
         case "dividir":
             if (n2 === 0) {
@@ -45,19 +46,25 @@ function calcular() {
             }
             resultado = n1 / n2;
             simbolo = "/";
-            colorResultado = "violet"; 
+            colorHistorial = "purple"; 
             break;
     }
 
     // 4. Mostramos el resultado usando .innerHTML
     resultadoParrafo.innerHTML = "Resultado: " + resultado;
 
-    // 5. Cambiamos el color de todo el parrafo
-    resultadoParrafo.style.color = colorResultado;
+    // 5. Color negro al resultado principal 
+    resultadoParrafo.style.color = "black";
 
-    // 6. Añadimos al historial 
-    let entradaHistorial = n1 + " " + simbolo + " " + n2 + " = " + resultado + "\n";
-    historialTextarea.value += entradaHistorial; 
+    // 6. Construcción e inserción del historial
+    // AQUI: He añadido el <br> al final para que haga salto de linea en el historial
+    let entradaHistorialHTML = 
+        '<span style="color:' + colorHistorial + ';">' + 
+        n1 + ' ' + simbolo + ' ' + n2 + ' = ' + resultado + 
+        '</span><br>'; 
+
+    // Insertamos la cadena HTML al contenido existente del DIV.
+    historialDiv.innerHTML += entradaHistorialHTML;
 
     // 7. Cambiar fondo del BODY 
     if (resultado % 2 === 0) {
@@ -69,19 +76,20 @@ function calcular() {
     }
 }
 
-//Busca el 'id' "resultado" y borra su contenido (innerHTML = "").
 function limpiarHistorial() {
-    document.getElementById('historial').value = "";
-    document.getElementById('resultado').innerHTML = ""; // Esto limpia el <p>
-    document.body.style.backgroundColor = "white"; // Resetea el fondo
+    // Capturamos el DIV para limpiarlo.
+    document.getElementById('historial').innerHTML = ""; 
+    
+    document.getElementById('resultado').innerHTML = "";
+    document.body.style.backgroundColor = "white"; 
 }
 
-//Funcion para el color aleatorio 
+// Funcion para el color aleatorio 
 function generarColorAleatorio() {
-  let letras = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letras[Math.floor(Math.random() * 16)];
-  }
-  return color;
+    let letras = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letras[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }

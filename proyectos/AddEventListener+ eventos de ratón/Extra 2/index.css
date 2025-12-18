@@ -1,0 +1,26 @@
+body {
+    background-color: #ff3333; 
+    font-family: sans-serif; 
+    text-align: center;      
+}
+
+.campo-batalla {
+    background-color: white;
+    width: 300px;            
+    margin: 50px auto;      
+    padding: 20px;
+    border: 5px solid black; 
+    border-radius: 20px;     
+}
+
+#pokemon {
+    font-size: 100px;
+    cursor: pointer;        
+    transition: 0.5s;    
+}
+
+#nombre-pokemon {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
