@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .circulo{
     width:200px;
     aspect-ratio: 1/1;
@@ -27,4 +28,35 @@
     border: solid 2px blue;
     background-color: pink ;
     height: 200px;
+=======
+.circulo{
+    width:200px;
+    aspect-ratio: 1/1;
+    border: solid 2px black;
+    border-radius: 50%;
+
+    /*centro contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circuloRojo{
+    width:200px;
+    aspect-ratio: 1/1;
+    border: dashed 3px rgb(255, 0, 0);
+    border-radius: 50%;
+
+    /*centro contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuadrado{
+    width:200px;
+    border: solid 2px blue;
+    background-color: pink ;
+    height: 200px;
+>>>>>>> 02b34197b14dfadb723bf33e2071e9a180a6d62b
 }
