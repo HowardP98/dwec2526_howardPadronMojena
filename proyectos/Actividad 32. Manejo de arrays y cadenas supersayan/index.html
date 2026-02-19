@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Dragon Ball Z</title>   
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body onload="actualizar()">
+
+    <div id="contenedor-dbz">
+        <h1>Personajes DBZ</h1>
+        
+        <div class="pantalla-input">
+            <input type="text" id="inputPersonaje" placeholder="Nombre del personaje...">
+        </div>
+        
+        <div class="botones-container">
+            <button id="push">Añadir al Final (Push)</button>
+            <button id="pop">Eliminar Último (Pop)</button>
+            <button id="unshift">Añadir al Inicio (Unshift)</button>
+            <button id="shift">Eliminar Primero (Shift)</button>
+            <button id="sort">Ordenar (Sort)</button>
+        </div>
+
+        <div id="resultado"></div>
+    </div>
+
+</body>
+</html>
